@@ -1,0 +1,22 @@
+{
+  "name" : "starving",
+  "effectConfig" : {
+    "starttickTime" : 5,
+    "damageIncrement" : 0.1,
+    "delayDecrement" : 0.1,
+    "movementModifiers" : {
+      "speedModifier" : 0.80
+    },
+    "healthPercentage" : 0.5
+  },
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "starving.lua"
+  ],
+
+  "animationConfig" : "starving.animation",
+
+  "label" : "Starving",
+  "icon" : "/interface/statuses/starving.png"
+}

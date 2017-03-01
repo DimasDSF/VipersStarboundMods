@@ -1,0 +1,19 @@
+{
+  "name" : "hungry",
+  "effectConfig" : {
+    "movementModifiers" : {
+      "speedModifier" : 0.90
+    },
+    "healthPercentage" : 0.8
+  },
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "hungry.lua"
+  ],
+
+  "animationConfig" : "hungry.animation",
+
+  "label" : "Hungry",
+  "icon" : "/interface/statuses/hungry.png"
+}

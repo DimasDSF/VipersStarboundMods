@@ -1,0 +1,14 @@
+{
+  "name" : "mudslow",
+  "effectConfig" : {},
+  "defaultDuration" : 15,
+
+  "scripts" : [
+    "mudslow.lua"
+  ],
+
+  "animationConfig" : "mudslow.animation",
+
+  "label" : "Slow",
+  "icon" : "/interface/statuses/slow.png"
+}
