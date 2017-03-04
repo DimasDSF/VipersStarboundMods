@@ -3,7 +3,7 @@
   "blockingStat" : "poisonStatusImmunity",
 
   "effectConfig" : {},
-  "defaultDuration" : 60,
+  "defaultDuration" : 240,
 
   "scripts" : [
     "foodpoison.lua"

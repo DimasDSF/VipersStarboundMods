@@ -8,6 +8,14 @@ function init()
 end
 
 function update(dt)
+  self.statefflist = status.activeUniqueStatusEffectSummary()
+  self.efftablestring = sb.printJson(self.statefflist)
+  self.hasweteff = string.find(self.efftablestring, "wet")
+  
+  if (self.hasweteff ~= nil) then
+    effect.expire()
+  end
+  
   mcontroller.controlModifiers({
       speedModifier = 0.8,
       airJumpModifier = 0.85

@@ -16,6 +16,15 @@ function init()
 end
 
 function update(dt)
+  self.statefflist = status.activeUniqueStatusEffectSummary()
+  self.efftablestring = sb.printJson(self.statefflist)
+  self.hasweteff = string.find(self.efftablestring, "wet")
+  
+  if (self.hasweteff ~= nil) then
+    self.tickDamage = 0.2 * (config.getParameter("tickDamage"))
+  else
+    self.tickDamage = config.getParameter("tickDamage")
+  end
   self.tickTimer = math.max(0, self.tickTimer - dt)
   if self.tickTimer == 0 and mcontroller.onGround() then
     animator.burstParticleEmitter("flames")

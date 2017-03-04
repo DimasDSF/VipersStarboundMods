@@ -19,13 +19,9 @@ end
 function update(dt)
   self.statefflist = status.activeUniqueStatusEffectSummary()
   self.efftablestring = sb.printJson(self.statefflist)
-  self.iswet = false
   self.hasweteff = string.find(self.efftablestring, "wet")
-  if self.hasweteff ~= nil then
-    self.iswet = true
-  end
   
-  if self.iswet then
+  if (self.hasweteff ~= nil) then
     self.energyCost = 2 * (config.getParameter("energyCost", 1))
 	self.healthDamage = 1.2 * (config.getParameter("healthDamage", 1))
   else

@@ -13,30 +13,20 @@ end
 function update(dt)
   self.statefflist = status.activeUniqueStatusEffectSummary()
   self.efftablestring = sb.printJson(self.statefflist)
-  self.oiled = false
-  self.wet = false
-  
   self.hasoiledeff = string.find(self.efftablestring, "tarslow")
   self.hasweteff = string.find(self.efftablestring, "wet")
   
-  if (self.hasoiledeff ~= nil) then
-    self.oiled = true
-  end
-  if (self.hasweteff ~= nil) then
-    self.wet = true
-  end
-  
-  if effect.duration() and self.oiled then
+  if effect.duration() and (self.hasoiledeff ~= nil) then
     effect.modifyDuration(dt)
   end
   
-  if effect.duration() and (not self.oiled) and (world.liquidAt({mcontroller.xPosition(), mcontroller.yPosition() - 1}) or self.wet) then
+  if effect.duration() and (self.hasoiledeff == nil) and (world.liquidAt({mcontroller.xPosition(), mcontroller.yPosition() - 1}) or (self.hasweteff ~= nil)) then
     effect.expire()
   end
   
-  if self.oiled and (self.wet or world.liquidAt({mcontroller.xPosition(), mcontroller.yPosition() - 1})) then
+  if (self.hasoiledeff ~= nil) and ((self.hasweteff ~= nil) or world.liquidAt({mcontroller.xPosition(), mcontroller.yPosition() - 1})) then
     self.tickDamagePercentage = 0.015
-  elseif self.oiled and (not (self.wet or world.liquidAt({mcontroller.xPosition(), mcontroller.yPosition() - 1}))) then
+  elseif (self.hasoiledeff ~= nil) and (not ((self.hasweteff ~= nil) or world.liquidAt({mcontroller.xPosition(), mcontroller.yPosition() - 1}))) then
     self.tickDamagePercentage = 0.040
   else
     self.tickDamagePercentage = 0.030

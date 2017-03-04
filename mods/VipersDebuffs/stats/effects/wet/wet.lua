@@ -1,30 +1,34 @@
 function init()
   animator.setParticleEmitterOffsetRegion("drips", mcontroller.boundBox())
-  animator.setParticleEmitterActive("drips", true)
+  self.mouthPosition = status.statusProperty("mouthPosition") or {0,0}
+  self.mouthBounds = {self.mouthPosition[1], self.mouthPosition[2], self.mouthPosition[1], self.mouthPosition[2]}
+  --animator.setParticleEmitterActive("drips", true)
 end
 
 function update(dt)
   self.statefflist = status.activeUniqueStatusEffectSummary()
   self.efftablestring = sb.printJson(self.statefflist)
-  self.hungerPercentage = 0.9
-  self.isburning = false
-  self.iscold = false
   self.hasburningeff = string.find(self.efftablestring, "burning")
   self.hascoldbiomeeff = string.find(self.efftablestring, "biomecold")
-  if (self.hasburningeff ~= nil) then
-    self.isburning = true
-  end
-  if (self.hascoldbiomeeff ~= nil) then
-    self.iscold = true
+  self.hasswimmingeff = string.find(self.efftablestring, "swimming")
+  
+  local position = mcontroller.position()
+  local worldMouthPosition = {
+    self.mouthPosition[1] + position[1],
+    self.mouthPosition[2] + position[2]
+  }
+  local liquidAtMouth = world.liquidAt(worldMouthPosition)
+  
+  if ((self.hasswimmingeff == nil) or ((self.hasswimmingeff ~= nil) and not liquidAtMouth)) then
+    animator.setParticleEmitterActive("drips", true)
+  else
+    animator.setParticleEmitterActive("drips", false)
   end
   
-  status.addEphemeralEffect("hungry", 1000)
-  
-  if effect.duration() and self.isburning then
+  if effect.duration() and (self.hasburningeff ~= nil) then
     effect.modifyDuration(-dt)
   end
-  
-  if effect.duration() and self.iscold then
+  if effect.duration() and (self.hascoldbiomeeff ~= nil) then
     effect.modifyDuration(dt)
   end
 end
