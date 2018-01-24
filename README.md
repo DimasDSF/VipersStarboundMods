@@ -3,8 +3,7 @@ Starbound Mods Repository
 
 
 ### Currently Featured Mods:
-- VipersDebuffs
-- ShipFlightTimeIncreased
+- VipersGameplayChanges
 
 -------
 ### Installation:
