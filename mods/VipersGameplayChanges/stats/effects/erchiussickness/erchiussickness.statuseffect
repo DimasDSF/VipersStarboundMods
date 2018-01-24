@@ -1,0 +1,22 @@
+{
+  "name" : "erchiussickness",
+
+  "effectConfig" : {
+
+    "effectMaxErchius" : 5000,
+	"energyCost" : 0.06,
+	"healthDamage" : 1.0,
+	"tickTimeBase" : 2.5,
+	"tickTimeReductionOverCap" : 0.01
+  },
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "erchiussickness.lua"
+  ],
+
+  "animationConfig" : "erchiussickness.animation",
+
+  "label" : "Erchius Decay",
+  "icon" : "/interface/statuses/irradiated.png"
+}

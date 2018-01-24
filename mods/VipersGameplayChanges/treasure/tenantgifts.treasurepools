@@ -1,0 +1,230 @@
+  // ==============================================================================================
+  //                                      GIFTS FROM TENANTS
+  // ==============================================================================================
+{
+  "villagerGift" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.70, "pool" : "tenantMoney"},
+        {"weight" : 0.20, "pool" : "healingItem"},
+        {"weight" : 0.10, "pool" : "valuableTreasure"}
+      ],
+      "poolRounds" : 1,
+      "allowDuplication" : false
+    }]
+  ],
+
+  "merchantGift" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.55, "pool" : "tenantMoney"},
+        {"weight" : 0.20, "pool" : "healingItem"},
+        {"weight" : 0.10, "pool" : "tool"},
+        {"weight" : 0.10, "pool" : "thrownWeapon"},
+        {"weight" : 0.025, "pool" : "weapon"},
+        {"weight" : 0.015, "pool" : "shield"},
+        {"weight" : 0.005, "pool" : "instrument"},
+        {"weight" : 0.004, "pool" : "costume"},
+        {"weight" : 0.001, "pool" : "valuableTreasure"}
+      ],
+      "poolRounds" : 1,
+      "allowDuplication" : false
+    }]
+  ],
+
+  "tenantMoney" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.4, "item" : [ "money", 200]},
+        {"weight" : 0.25, "item" : [ "money", 250]},
+        {"weight" : 0.2, "item" : [ "money", 300]},
+        {"weight" : 0.1, "item" : [ "money", 350]},
+        {"weight" : 0.05, "item" : [ "money", 400]}
+      ],
+      "poolRounds" : 1,
+      "allowDuplication" : false
+    }],
+    [2, {
+      "pool" : [
+        {"weight" : 0.4, "item" : [ "money", 250]},
+        {"weight" : 0.25, "item" : [ "money", 300]},
+        {"weight" : 0.2, "item" : [ "money", 350]},
+        {"weight" : 0.1, "item" : [ "money", 400]},
+        {"weight" : 0.05, "item" : [ "money", 450]}
+      ],
+      "poolRounds" : 1,
+      "allowDuplication" : false
+    }],
+    [3, {
+      "pool" : [
+        {"weight" : 0.4, "item" : [ "money", 300]},
+        {"weight" : 0.25, "item" : [ "money", 350]},
+        {"weight" : 0.2, "item" : [ "money", 400]},
+        {"weight" : 0.1, "item" : [ "money", 450]},
+        {"weight" : 0.05, "item" : [ "money", 500]}
+      ],
+      "poolRounds" : 1,
+      "allowDuplication" : false
+    }],
+    [4, {
+      "pool" : [
+        {"weight" : 0.4, "item" : [ "money", 350]},
+        {"weight" : 0.25, "item" : [ "money", 400]},
+        {"weight" : 0.2, "item" : [ "money", 450]},
+        {"weight" : 0.1, "item" : [ "money", 500]},
+        {"weight" : 0.05, "item" : [ "money", 550]}
+      ],
+      "poolRounds" : 1,
+      "allowDuplication" : false
+    }],
+    [5, {
+      "pool" : [
+        {"weight" : 0.4, "item" : [ "money", 400]},
+        {"weight" : 0.25, "item" : [ "money", 450]},
+        {"weight" : 0.2, "item" : [ "money", 500]},
+        {"weight" : 0.1, "item" : [ "money", 550]},
+        {"weight" : 0.05, "item" : [ "money", 600]}
+      ],
+      "poolRounds" : 1,
+      "allowDuplication" : false
+    }],
+    [6, {
+      "pool" : [
+        {"weight" : 0.4, "item" : [ "money", 450]},
+        {"weight" : 0.25, "item" : [ "money", 500]},
+        {"weight" : 0.2, "item" : [ "money", 550]},
+        {"weight" : 0.1, "item" : [ "money", 600]},
+        {"weight" : 0.05, "item" : [ "money", 650]}
+      ],
+      "poolRounds" : 1,
+      "allowDuplication" : false
+    }],
+    [7, {
+      "pool" : [
+        {"weight" : 0.4, "item" : [ "money", 500]},
+        {"weight" : 0.25, "item" : [ "money", 550]},
+        {"weight" : 0.2, "item" : [ "money", 600]},
+        {"weight" : 0.1, "item" : [ "money", 650]},
+        {"weight" : 0.05, "item" : [ "money", 700]}
+      ],
+      "poolRounds" : 1,
+      "allowDuplication" : false
+    }]
+  ],
+
+  "minerGift" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.4, "item" : [ "ironore", 4]},
+        {"weight" : 0.4, "item" : [ "copperore", 4]},
+        {"weight" : 0.3, "item" : [ "ironore", 6]},
+        {"weight" : 0.3, "item" : [ "copperore", 6]},
+        {"weight" : 0.1, "item" : [ "ironore", 8]},
+        {"weight" : 0.1, "item" : [ "copperore", 8]}
+      ],
+      "poolRounds" : 1,
+      "allowDuplication" : false
+    }],
+    [2, {
+      "pool" : [
+        {"weight" : 0.4, "item" : [ "ironore", 6]},
+        {"weight" : 0.4, "item" : [ "copperore", 6]},
+        {"weight" : 0.3, "item" : [ "ironore", 8]},
+        {"weight" : 0.3, "item" : [ "copperore", 8]},
+        {"weight" : 0.1, "item" : [ "ironore", 10]},
+        {"weight" : 0.1, "item" : [ "copperore", 10]}
+      ],
+      "poolRounds" : 1,
+      "allowDuplication" : false
+    }],
+    [3, {
+      "pool" : [
+        {"weight" : 0.4, "item" : [ "titaniumore", 3]},
+        {"weight" : 0.4, "item" : [ "silverore", 3]},
+        {"weight" : 0.3, "item" : [ "titaniumore", 5]},
+        {"weight" : 0.3, "item" : [ "silverore", 5]},
+        {"weight" : 0.1, "item" : [ "titaniumore", 7]},
+        {"weight" : 0.1, "item" : [ "silverore", 7]}
+      ],
+      "poolRounds" : 1,
+      "allowDuplication" : false
+    }],
+    [4, {
+      "pool" : [
+        {"weight" : 0.4, "item" : [ "titaniumore", 5]},
+        {"weight" : 0.4, "item" : [ "silverore", 5]},
+        {"weight" : 0.3, "item" : [ "titaniumore", 7]},
+        {"weight" : 0.3, "item" : [ "silverore", 7]},
+        {"weight" : 0.1, "item" : [ "titaniumore", 9]},
+        {"weight" : 0.1, "item" : [ "silverore", 9]}
+      ],
+      "poolRounds" : 1,
+      "allowDuplication" : false
+    }],
+    [5, {
+      "pool" : [
+        {"weight" : 0.4, "item" : [ "goldore", 3]},
+        {"weight" : 0.4, "item" : [ "aegisaltore", 3]},
+        {"weight" : 0.4, "item" : [ "feroziumore", 3]},
+        {"weight" : 0.4, "item" : [ "violiumore", 3]}
+      ],
+      "poolRounds" : 1,
+      "allowDuplication" : false
+    }],
+    [6, {
+      "pool" : [
+        {"weight" : 0.4, "item" : [ "goldore", 4]},
+        {"weight" : 0.4, "item" : [ "aegisaltore", 4]},
+        {"weight" : 0.4, "item" : [ "feroziumore", 4]},
+        {"weight" : 0.4, "item" : [ "violiumore", 4]}
+      ],
+      "poolRounds" : 1,
+      "allowDuplication" : false
+    }],
+    [7, {
+      "pool" : [
+        {"weight" : 0.4, "item" : [ "goldore", 5]},
+        {"weight" : 0.4, "item" : [ "aegisaltore", 5]},
+        {"weight" : 0.4, "item" : [ "feroziumore", 5]},
+        {"weight" : 0.4, "item" : [ "violiumore", 5]}
+      ],
+      "poolRounds" : 1,
+      "allowDuplication" : false
+    }]
+  ],
+
+
+  "tarGift" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.1, "pool" : "basicTreasure"},
+        {"weight" : 0.2, "item" : [ "throwingspear", 3]},
+        {"weight" : 0.1, "item" : [ "tarball", 3]},
+        {"weight" : 0.1, "item" : [ "throwingdagger", 3]},
+        {"weight" : 0.1, "item" : [ "meatstew", 1]},
+        {"weight" : 0.1, "item" : [ "meatpie", 1]},
+        {"weight" : 0.2, "item" : [ "huntingspear", 3]},
+        {"weight" : 0.1, "item" : [ "fishstew", 1]},
+        {"weight" : 0.1, "item" : [ "throwingdart", 3]},
+        {"weight" : 0.1, "item" : [ "meatdumplings", 1]},
+        {"weight" : 0.1, "item" : [ "javelin", 3]},
+        {"weight" : 0.05, "item" : [ "coconut", 3]}
+      ],
+      "poolRounds" : 1,
+      "allowDuplication" : false
+    }]
+  ],
+
+  "fleshGift" : [
+    [1, {
+      "pool" : [
+        {"weight" : 0.2, "pool" : "chestMoney"},
+        {"weight" : 0.3, "pool" : "basicTreasure"},
+        {"weight" : 0.2, "pool" : "weapon"},
+        {"weight" : 0.1, "pool" : "food"}
+      ],
+      "poolRounds" : 1,
+      "allowDuplication" : false
+    }]
+  ]
+}
