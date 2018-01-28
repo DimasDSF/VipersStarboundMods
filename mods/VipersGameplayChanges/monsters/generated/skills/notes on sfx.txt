@@ -1,0 +1,107 @@
+
+
+fireNeedle
+"/sfx/gun/needler1.ogg"
+
+firePopSpray
+"/sfx/gun/evileye1.ogg", "/sfx/gun/evileye2.ogg", "/sfx/gun/evileye3.ogg", "/sfx/gun/evileye4.ogg", "/sfx/gun/evileye5.ogg", "/sfx/gun/evileye6.ogg"
+
+firePopStrong
+"/sfx/projectiles/bubble_blow1.ogg", "/sfx/projectiles/bubble_blow3.ogg"	2
+
+fireThrowingSmack
+"/sfx/projectiles/giganticsnowball_impact.ogg"					1 (1 lagi iceshot, pindah ke iceshatter)
+
+fireThrowingRock
+ "/sfx/projectiles/throwingboulder_impact1.ogg"
+
+
+
+fireWaterSlap
+"/sfx/projectiles/waterballoon1.ogg", "/sfx/projectiles/waterballoon2.ogg", "/sfx/projectiles/waterballoon3.ogg", "/sfx/projectiles/waterballoon4.ogg"
+
+fireWaterSpout
+"/sfx/blocks/water_getout.ogg", "/sfx/blocks/water_splash_normal.ogg", "/sfx/blocks/water_splash_small.ogg"
+
+fireIceShatter
+"/sfx/projectiles/ice_break1.ogg", "/sfx/projectiles/ice_break2.ogg", "/sfx/projectiles/ice_break3.ogg", "/sfx/projectiles/ice_break4.ogg"						2
+
+fireIceShot
+"/sfx/gun/rocket_ice1.ogg"							1
+
+
+
+firePoisonSpit
+"/sfx/projectiles/poisonorb_break1.ogg", "/sfx/projectiles/poisonorb_break2.ogg"
+
+firePoisonBelch									2
+"/sfx/projectiles/goo_spit1.ogg"
+"/sfx/projectiles/goo_spit1.ogg", "/sfx/projectiles/goo_spit2.ogg"
+
+
+
+fireVomit
+"/sfx/projectiles/bloodvomit1.ogg", "/sfx/projectiles/bloodvomit2.ogg", "/sfx/projectiles/bloodvomit3.ogg", "/sfx/projectiles/bloodvomit4.ogg", "/sfx/projectiles/bloodvomit5.ogg", "/sfx/projectiles/bloodvomit6.ogg", "/sfx/projectiles/bloodvomit7.ogg" 
+
+fireSpit
+"/sfx/projectiles/spit1.ogg", "/sfx/projectiles/spit2.ogg"
+
+fireBeetle
+"/sfx/projectiles/beetle1.ogg", "/sfx/projectiles/beetle2.ogg", "/sfx/projectiles/beetle3.ogg", "/sfx/projectiles/beetle4.ogg"
+
+
+
+
+fireFireBreath
+"/sfx/projectiles/fireball_spit.ogg"						2
+
+fireFireBlastSmall
+"/sfx/projectiles/blast_small_fire3.ogg", "/sfx/gun/fireworkgun_blast1.ogg"
+
+fireFireBlastLarge
+"/sfx/npc/boss/dragonboss_fireball1.ogg", "/sfx/npc/boss/dragonboss_fireball2.ogg", "/sfx/npc/boss/dragonboss_fireball3.ogg"
+
+fireFireLaunch
+"/sfx/gun/fireworkgun_large1.ogg", "/sfx/gun/fireworkgun_large3.ogg" 
+
+fireFireSmoke
+"/sfx/projectiles/fireball_poof.ogg"						2
+
+
+
+fireElectricZap
+"/sfx/gun/lightningcoil1.ogg", "/sfx/gun/lightningcoil2.ogg"
+"/sfx/gun/lightningcoil1.ogg", "/sfx/gun/lightningcoil2.ogg", "/sfx/gun/lightningcoil3.ogg"
+
+fireElectricShock
+"/sfx/melee/travelingslash_electric1.ogg", "/sfx/melee/travelingslash_electric3.ogg", "/sfx/melee/travelingslash_electric5.ogg", "/sfx/melee/travelingslash_electric7.ogg"													2
+fireElectricStatic
+"/sfx/melee/tesla_shock_kill.ogg"
+
+
+
+fireLaserPlasmaHeavy
+"/sfx/gun/magnorbs_fire1.ogg", "/sfx/gun/magnorbs_fire2.ogg", "/sfx/gun/magnorbs_fire3.ogg", "/sfx/gun/magnorbs_fire4.ogg"									2
+
+fireLaserPlasmaLight
+"/sfx/projectiles/plasma1.ogg", "/sfx/projectiles/plasma2.ogg", "/sfx/projectiles/plasma3.ogg"
+
+fireLaserGravity
+"/sfx/gun/erchiuseyebeam_stop.ogg", "/sfx/objects/crystaltrap_on1.ogg" ]
+
+fireLaserDischarge
+"/sfx/melee/astraltear1.ogg", "/sfx/melee/astraltear2.ogg"
+
+fireElectricCharge
+"/sfx/melee/charge_up15.ogg"
+
+
+fireWindGust
+"/sfx/projectiles/glitchscratch.ogg"
+
+fireWindSpin
+"/sfx/projectiles/spinning_throw.ogg"						2
+
+fireRainbow
+"/sfx/gun/gnomegun1.ogg", "/sfx/gun/gnomegun2.ogg", "/sfx/gun/gnomegun3.ogg", "/sfx/gun/gnomegun4.ogg"
+

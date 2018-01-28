@@ -1,0 +1,69 @@
+[
+{
+	"op" : "add",
+	"path" : "/animationParameters/sounds/fireLaserGravity",
+	"value" :  [ "/sfx/gun/erchiuseyebeam_stop.ogg", "/sfx/objects/crystaltrap_on1.ogg" ]
+},
+{
+	"op" : "add",
+	"path" : "/config/hostileActions/0/parameters/fireSound",
+	"value" : "fireLaserGravity"
+},
+
+
+
+
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/cooldown",
+    "value": [ 2, 4 ]
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/minimumRange",
+    "value": 1
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/windupTime",
+    "value": 0.4
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/winddownTime",
+    "value": 0.01
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/fireDelay",
+    "value": 0
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/speed",
+    "value": 18
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/power",
+    "value": 18
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/knockback",
+    "value": 40
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/damageKind",
+    "value": "ice"
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/statusEffects",
+    "value": [
+      "frostslow",
+	  "paralysis"
+    ]
+  }
+]

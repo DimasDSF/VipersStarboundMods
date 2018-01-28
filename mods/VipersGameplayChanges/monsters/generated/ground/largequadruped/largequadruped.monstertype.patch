@@ -1,0 +1,108 @@
+[
+
+{
+	"op" : "add",
+	"path" : "/baseParameters/behaviorConfig/projectileOffset",
+	"value" : [1.0, 1.5]
+},
+{
+	"op" : "add",
+	"path" : "/baseParameters/behaviorConfig/hostileActions",
+	"value" : [{"name":"action-fire"}]
+},
+{
+	"op" : "add",
+	"path" : "/baseParameters/skillCount",
+	"value" : 3
+},
+
+// Replace baseSkills satu aja
+// Supaya dia bisa pake specialSkills
+
+{
+	"op":"replace",
+	"path":"/baseParameters/baseSkills",
+	"value": [ "pounceAttack" ]
+},
+
+// Not included:
+// doubleBarbSprayAttack (nyerang ke belakang)
+// inkSprayAttack (OP)
+// seedSpitAttack (ga berfungsi)
+// staticDischargeAttack (ga berfungsi)
+// tentacleShotAttack (unique tentacle)
+// "flyingSwoopAttack" (ground monster can't fly man)
+
+{
+	"op" : "add",
+	"path" : "/baseParameters/specialSkills",
+	"value" : [
+		"acidicSpitAttack",
+		"acidSprayAttack",
+		"beamBurstAttack",
+		"beetleSwarmAttack",
+		"bloodVomitAttack",
+		"blueFlameAttack",
+		"boneRainAttack",
+		"bubbleBlastAttack",
+		"burninghaloAttack",
+		"cellBlastAttack",
+		"darkGasAttack",
+		"darkGravityBallAttack",
+		"explosivePhlegmAttack",
+		"eyeballShotAttack",
+		"eyeballSprayAttack",
+		"fireballAttack",
+		"fireSwirlAttack",
+		"fishBreathAttack",
+		"flameBurstAttack",
+		"gasBelchAttack",
+		"glitterAttack",
+		"iceBlastAttack",
+		"iceShotAttack",
+		"leafyGustAttack",
+		"lightBallAttack",
+		"miniDragonBreathAttack",
+		"mudBallAttack",
+		"orbOfZotsAttack",			// masih butuh sfx baru utk tembakan beruntun
+		"plasmaSweepAttack",		// masih butuh sfx baru utk tembakan beruntun
+		"plasmaTorpedoAttack",
+		"putridWaveAttack",
+		"rainbowVomitAttack",
+		"rockRollAttack",
+		"rockShotAttack",
+		"shardSprayAttack",
+		"shockingBoltAttack",
+		"shockingWaveAttack",
+		"smokeRingAttack",
+		"snotBubbleAttack",
+		"snotShotAttack",
+		"sonicWaveAttack",
+		"spiceCloudAttack",
+		"waterGunAttack"			// need better individual sfx
+		]
+},
+
+
+{
+	"op" : "replace",
+	"path" : "/baseParameters/touchDamage/damage",
+	"value" : 12
+},
+{
+	"op": "replace",
+	"path": "/baseParameters/movementSettings/runSpeed",
+	"value": 15
+},
+{
+	"op":"replace",
+	"path":"/baseParameters/knockoutTime",
+	"value": 0.1
+},
+{
+	"op" : "replace",
+	"path" : "/baseParameters/statusSettings/stats/knockbackStunTime/baseValue",
+	"value" : 0.1
+}
+
+]

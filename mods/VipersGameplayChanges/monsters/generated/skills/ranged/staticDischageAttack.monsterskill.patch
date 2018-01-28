@@ -1,0 +1,84 @@
+[
+{
+	"op" : "add",
+	"path" : "/animationParameters/sounds/fireLaserDischarge",
+	"value" :  [ "/sfx/melee/astraltear1.ogg", "/sfx/melee/astraltear2.ogg" ]
+},
+{
+	"op" : "add",
+	"path" : "/config/hostileActions/0/parameters/fireSound",
+	"value" : "fireLaserDischarge"
+},
+{
+	"op" : "replace",
+	"path" : "/config/hostileActions/0/cooldown",
+	"value" : 1
+},
+//{
+//	"op" : "replace",
+//	"path" : "/config/hostileActions/0/parameters/projectileParameters",
+//	"value" : { "speed" : 30 }
+//},
+{
+	"op" : "replace",
+	"path" : "/config/hostileActions/0/parameters/power",
+	"value" : 20
+},
+
+
+
+
+
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/minimumRange",
+    "value": 1
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/maximumRange",
+    "value": 8
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/windupTime",
+    "value": 0.1
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/winddownTime",
+    "value": 0.01
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/fireDelay",
+    "value": 0
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/knockback",
+    "value": 60
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/damageKind",
+    "value": "electric"
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/statusEffects",
+    "value": [
+      "electric"
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/aimDirection",
+    "value": [3, 0.5]
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/aimAtTarget",
+    "value": false
+  }
+]

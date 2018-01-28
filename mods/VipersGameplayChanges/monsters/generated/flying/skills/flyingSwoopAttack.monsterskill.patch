@@ -1,0 +1,29 @@
+[
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/windupTime",
+    "value": 0.2
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/swoopVelocity",
+    "value": 35
+  },
+// gravityMultiplier: makin besar angka positifnya, makin terpengaruh gravitasi (berat ke bawah)
+// kalo minus jadi lebih floaty
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/gravityMultiplier",
+    "value": -0.1
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/collisionCheck",
+    "value": false
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/winddownTime",
+    "value": 0.1
+  }
+]

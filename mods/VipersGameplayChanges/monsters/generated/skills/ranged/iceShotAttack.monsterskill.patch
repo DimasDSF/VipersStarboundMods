@@ -1,0 +1,79 @@
+[
+//{
+//	"op" : "add",
+//	"path" : "/animationParameters/sounds/fireThrowingSmack",
+//	"value" :  [ "/sfx/projectiles/giganticsnowball_impact.ogg" ]
+//},
+//{
+//	"op" : "add",
+//	"path" : "/config/hostileActions/0/parameters/fireSound",
+//	"value" : "fireThrowingSmack"
+//},
+
+{
+	"op" : "add",
+	"path" : "/animationParameters/sounds/fireIceShatter",
+	"value" :  [ "/sfx/projectiles/ice_break1.ogg", "/sfx/projectiles/ice_break2.ogg", "/sfx/projectiles/ice_break3.ogg", "/sfx/projectiles/ice_break4.ogg" ]
+},
+{
+	"op" : "add",
+	"path" : "/config/hostileActions/0/parameters/fireSound",
+	"value" : "fireIceShatter"
+},
+
+
+
+
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/cooldown",
+    "value": [ 2, 4 ]
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/minimumRange",
+    "value": 3
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/windupTime",
+    "value": 0.4
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/winddownTime",
+    "value": 0.01
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/fireDelay",
+    "value": 0
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/speed",
+    "value": 50
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/power",
+    "value": 12
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/knockback",
+    "value": 40
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/damageKind",
+    "value": "ice"
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/statusEffects",
+    "value": [
+      "frostsnare"
+    ]
+  }
+]

@@ -1,0 +1,7 @@
+[
+{
+	"op" : "add",
+	"path" : "/sounds/fire",
+	"value" : [ "/sfx/npc/monsters/monster_surprise.ogg" ]
+}
+]

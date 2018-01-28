@@ -1,0 +1,68 @@
+[
+{
+	"op" : "add",
+	"path" : "/animationParameters/sounds/fireWaterSpout",
+	"value" : [ "/sfx/blocks/water_getout.ogg", "/sfx/blocks/water_splash_normal.ogg", "/sfx/blocks/water_splash_small.ogg" ]
+},
+{
+	"op" : "add",
+	"path" : "/config/hostileActions/0/parameters/fireSound",
+	"value" : "fireWaterSpout"
+},
+
+
+
+
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/cooldown",
+    "value": [ 2, 4 ]
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/minimumRange",
+    "value": 1
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/maximumRange",
+    "value": 36
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/windupTime",
+    "value": 0.4
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/winddownTime",
+    "value": 0.01
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/fireDelay",
+    "value": 0
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/power",
+    "value": 8
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/speed",
+    "value": 65
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/knockback",
+    "value": 0
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/statusEffects",
+    "value": [
+      "wet"
+    ]
+  }
+]

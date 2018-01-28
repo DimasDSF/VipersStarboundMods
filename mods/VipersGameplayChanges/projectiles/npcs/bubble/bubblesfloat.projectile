@@ -1,0 +1,25 @@
+{
+  "projectileName" : "bubblesfloat",
+  "physics" : "flame",
+  "bounces" : 4,
+  "timeToLive" : 3,
+  "piercing" : true,
+  "speed" : 15,
+  "image" : "bubbles.png",
+  "animationCycle" : 0.55,
+  "lightColor" : [60, 20, 250],
+  "frameNumber" : 16,
+  "emitters" : [ "iceplasmarocket" ],
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "actionOnReap" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/projectiles/bubble_pop.ogg" ]
+    }
+  ],
+  "damageKind" : "bubble",
+  "damageKindImage" : "icon.png",
+  "statusEffects" : [
+    "wet"
+  ]
+}

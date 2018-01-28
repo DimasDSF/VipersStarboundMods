@@ -1,0 +1,54 @@
+serangan bertubi2
+bloodVomitAttack
+blueFlameAttack (vanilla udah kuat gak gw ubah)
+bubbleBlastAttack (ini gw tiru blueFlame jadi lebih banyak bubble)
+darkGasAttack (udah oke: buat melee susah, tapi buat ranged gampang)
+eyeballSprayAttack 
+fishBreathAttack
+flameBurstAttack
+flySwarmAttack (udah ada food poisoning udah kuat)
+gasBelchAttack (ada slow lumayan)
+iceBlastAttack (damaged reduce, tapi ada frost snare)
+		>> jangan deh, frostslow aja. nanti makin dikit insentif buat main melee
+inkSprayAttack (vanilla udah kuat)
+orbOfZotsAttack
+plasmaSweepAttack (damage reduced)
+shardSprayAttack (vanilla udah kuat)
+shockingBoltAttack
+spiceCloudAttack
+
+
+
+belum diganti
+doubleBarbSprayAttack (nyerang ke belakang)
+rangedChompAttack (gak ada juga di list)
+seedSpitAttack (ga berfungsi))
+
+
+rencana ke depan dengan diversity mod
+- tambahin genangan racun (ini udah bisa sih, udah sebagian)
+- ada iceshot yang bisa freeze, ada yang cuma damage aja (udah)
+- tambahin darah keluar di bloodvomit (genangan air darah)
+- ubah yang kena racun jadi toxic waste
+
+
+
+OP
+- cloud attack (kayaknya iceBlast)
+- electric attack (shockingBoltAttack)
+- slow, fire, poison attack (spiceCloud? Balance ah)
+
+
+updates
+- change to replace instead of remove
+- beamburstattack speed
+- more bubbles in bubbleattack
+- reduce the amount of eyes but makes them more bouncy
+- reduce iceBlastAttack damage but add elemental effects (frostslow)
+- reduce shockingBoltAttack damage
+- reduce spiceCloudAttack damage
+- reduce iceShot damage, adds frostSnare
+- longer static discharge duration
+- acidic spit nambahin slime liquid
+- explosive phlegm harusnya jg tp blm berhasil
+- decrease damage watergun attack

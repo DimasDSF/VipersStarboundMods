@@ -1,0 +1,63 @@
+[
+{
+	"op" : "add",
+	"path" : "/animationParameters/sounds/fireElectricStatic",
+	"value" :  [ "/sfx/melee/tesla_shock_kill.ogg" ]
+},
+{
+	"op" : "add",
+	"path" : "/config/hostileActions/0/parameters/fireSound",
+	"value" : "fireElectricStatic"
+},
+
+
+
+
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/cooldown",
+    "value": [ 2, 4 ]
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/minimumRange",
+    "value": 1
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/maximumRange",
+    "value": 13
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/windupTime",
+    "value": 0.4
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/winddownTime",
+    "value": 0.01
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/fireDelay",
+    "value": 0
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/power",
+    "value": 20
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/knockback",
+    "value": 20
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/statusEffects",
+    "value": [
+	  "paralysis"
+    ]
+  }
+]

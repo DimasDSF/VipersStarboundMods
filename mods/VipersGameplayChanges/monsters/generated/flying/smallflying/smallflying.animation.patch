@@ -1,0 +1,112 @@
+[
+{
+	"op" : "add",
+	"path" : "/animatedParts/stateTypes/body/states/firewindup",
+	"value" : { "frames" : 1 }
+},
+{
+	"op" : "add",
+	"path" : "/animatedParts/stateTypes/body/states/fire",
+	"value" : { "frames" : 4, "cycle" : 0.4, "mode" : "loop" }
+},
+{
+	"op" : "add",
+	"path" : "/animatedParts/stateTypes/body/states/firewinddown",
+	"value" : { "frames" : 1 }
+},
+
+
+
+{
+	"op" : "add",
+	"path" : "/animatedParts/parts/backWings/partStates/body/firewindup",
+	"value" : { "properties" : { "image" : "<partImage>:fly.<frame>" } }
+},
+
+// udah ada
+// {
+//  	"op" : "add",
+//  	"path" : "/animatedParts/parts/backWings/partStates/body/fire",
+//  	"value" : { "properties" : { "image" : "<partImage>:fly.1" } }
+//  },
+
+{
+	"op" : "add",
+	"path" : "/animatedParts/parts/backWings/partStates/body/firewinddown",
+	"value" : { "properties" : { "image" : "<partImage>:fly.<frame>" } }
+},
+
+
+{
+	"op" : "add",
+	"path" : "/animatedParts/parts/frontWings/partStates/body/firewindup",
+	"value" : { "properties" : { "image" : "<partImage>:fly.<frame>" } }
+},
+
+// udah ada
+// {
+//  	"op" : "add",
+//  	"path" : "/animatedParts/parts/frontWings/partStates/body/fire",
+//  	"value" : { "properties" : { "image" : "<partImage>:fly.1" } }
+// },
+
+{
+	"op" : "add",
+	"path" : "/animatedParts/parts/frontWings/partStates/body/firewinddown",
+	"value" : { "properties" : { "image" : "<partImage>:fly.<frame>" } }
+},
+
+
+{
+	"op" : "add",
+	"path" : "/animatedParts/parts/body/partStates/body/firewindup",
+	"value" : { "properties" : { "image" : "<partImage>:fly.<frame>" } }
+},
+
+// udah ada
+// {
+//  	"op" : "add",
+//  	"path" : "/animatedParts/parts/body/partStates/body/fire",
+//  	"value" : { "properties" : { "image" : "<partImage>:fly.1" } }
+// },
+
+{
+	"op" : "add",
+	"path" : "/animatedParts/parts/body/partStates/body/firewinddown",
+	"value" : { "properties" : { "image" : "<partImage>:fly.<frame>" } }
+},
+
+
+
+{
+	"op" : "add",
+	"path" : "/animatedParts/parts/head/partStates/body/firewindup",
+	"value" : { "properties" : { "image" : "<partImage>:fire.2" } }
+},
+
+//	mestinya memang replace bukan add
+{
+	"op" : "replace",
+	"path" : "/animatedParts/parts/head/partStates/body/fire",
+	"value" : { "properties" : { "image" : "<partImage>:fire.2" } }
+},
+//
+
+{
+	"op" : "add",
+	"path" : "/animatedParts/parts/head/partStates/body/firewinddown",
+	"value" : { "properties" : { "image" : "<partImage>:fire.2" } }
+},
+
+
+{
+	"op" : "add",
+	"path" : "/sounds/fire",
+	"value" : [ "/sfx/npc/monsters/monster_surprise.ogg" ]
+},
+{
+	"op": "add",
+	"path": "/sounds/aggroHop/-",
+	"value": "/sfx/npc/monsters/monster_surprise.ogg"
+}
+]

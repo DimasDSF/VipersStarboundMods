@@ -1,0 +1,66 @@
+[
+{
+	"op" : "add",
+	"path" : "/animationParameters/sounds/fireIceShot",
+	"value" :  [ "/sfx/gun/rocket_ice1.ogg" ]
+},
+{
+	"op" : "add",
+	"path" : "/config/hostileActions/0/parameters/fireSound",
+	"value" : "fireIceShot"
+},
+
+
+
+
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/cooldown",
+    "value": [ 2, 4 ]
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/minimumRange",
+    "value": 2
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/maximumRange",
+    "value": 24
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/windupTime",
+    "value": 0.4
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/winddownTime",
+    "value": 0.01
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/fireDelay",
+    "value": 0
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/knockback",
+    "value": 40
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/damageKind",
+    "value": "ice"
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/fireArc",
+    "value": "true"
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileSpeed",
+    "value": 50
+  }
+]

@@ -1,5 +1,8 @@
 {
   "sounds" : {
-    "beep" : ["/sfx/interface/starving4.ogg"]
+    "beep" : ["/sfx/interface/starving4.ogg"],
+	"geiger_1" : ["/sfx/interface/geiger_1.ogg"],
+	"geiger_2" : ["/sfx/interface/geiger_2.ogg"],
+	"geiger_3" : ["/sfx/interface/geiger_3.ogg"]
   }
 }

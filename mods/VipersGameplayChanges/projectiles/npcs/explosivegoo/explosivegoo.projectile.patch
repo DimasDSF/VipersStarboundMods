@@ -1,0 +1,26 @@
+[
+  {
+    "op": "add",
+    "path": "/knockback",
+    "value": 20
+  },
+  {
+    "op": "replace",
+    "path": "/timeToLive",
+    "value": 6
+  },
+  {
+    "op": "add",
+    "path": "/actionOnReap/0/knockback",
+    "value": 60
+  },
+  {
+    "op": "add",
+    "path": "/actionOnReap/-",
+    "value": {
+      "action": "liquid",
+      "liquid": "jellyliquid",
+      "quantity": 10
+    }
+  }
+]

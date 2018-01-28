@@ -1,0 +1,50 @@
+[
+{
+	"op" : "add",
+	"path" : "/animationParameters/sounds/fireElectricShock",
+	"value" :  [ "/sfx/melee/travelingslash_electric1.ogg", "/sfx/melee/travelingslash_electric3.ogg", "/sfx/melee/travelingslash_electric5.ogg", "/sfx/melee/travelingslash_electric7.ogg"  ]
+},
+{
+	"op" : "add",
+	"path" : "/config/hostileActions/0/parameters/fireSound",
+	"value" : "fireElectricShock"
+},
+{
+	"op" : "replace",
+	"path" : "/config/hostileActions/0/parameters/maximumRange",
+	"value" : 15
+},
+
+
+
+
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/cooldown",
+    "value": [ 2, 4 ]
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/minimumRange",
+    "value": 1
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/windupTime",
+    "value": 0.4
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/winddownTime",
+    "value": 0.01
+  },
+  {
+    "op": "remove",
+    "path": "/config/hostileActions/0/parameters/fireDelay"
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/speed",
+    "value": 34
+  }
+]

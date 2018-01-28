@@ -1,0 +1,61 @@
+[
+{
+	"op" : "add",
+	"path" : "/animationParameters/sounds/fireLaserPlasmaHeavy",
+	"value" :  [ "/sfx/gun/magnorbs_fire1.ogg", "/sfx/gun/magnorbs_fire2.ogg", "/sfx/gun/magnorbs_fire3.ogg", "/sfx/gun/magnorbs_fire4.ogg" ]
+},
+{
+	"op" : "add",
+	"path" : "/config/hostileActions/0/parameters/fireSound",
+	"value" : "fireLaserPlasmaHeavy"
+},
+
+
+
+
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/cooldown",
+    "value": [ 2, 4 ]
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/minimumRange",
+    "value": 1
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/maximumRange",
+    "value": 24
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/windupEffect",
+    "value": "castelectric"
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/windupTime",
+    "value": 0.4
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/winddownTime",
+    "value": 0.01
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/fireDelay",
+    "value": 0
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/speed",
+    "value": 40
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/knockback",
+    "value": 30
+  }
+]

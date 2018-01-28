@@ -1,0 +1,12 @@
+[
+{
+	"op" : "add",
+	"path" : "/animationParameters/sounds/fireNeedle",
+	"value" :  [ "/sfx/gun/needler1.ogg" ]
+},
+{
+	"op" : "add",
+	"path" : "/config/hostileActions/0/parameters/fireSound",
+	"value" : "fireNeedle"
+}
+]

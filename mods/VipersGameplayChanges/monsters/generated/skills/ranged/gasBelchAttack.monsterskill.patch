@@ -1,0 +1,53 @@
+[
+{
+	"op" : "add",
+	"path" : "/animationParameters/sounds/firePoisonBelch",
+	"value" :  [ "/sfx/projectiles/goo_spit1.ogg"  ]
+},
+{
+	"op" : "add",
+	"path" : "/config/hostileActions/0/parameters/fireSound",
+	"value" : "firePoisonBelch"
+},
+{
+	"op" : "replace",
+	"path" : "/config/hostileActions/0/parameters/maximumRange",
+	"value" : 15
+},
+
+
+
+
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/cooldown",
+    "value": [ 2, 4 ]
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/windupTime",
+    "value": 0.4
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/winddownTime",
+    "value": 0.01
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/fireDelay",
+    "value": 0
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/damageKind",
+    "value": "poison"
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/statusEffects",
+    "value": [
+      "mudslow"
+    ]
+  }
+]

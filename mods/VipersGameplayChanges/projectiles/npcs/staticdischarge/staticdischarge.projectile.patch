@@ -1,0 +1,26 @@
+[
+  {
+    "op": "add",
+    "path": "/timeToLive",
+    "value": 10
+  },
+  {
+    "op": "add",
+    "path": "/actionOnReap",
+    "value": [
+      {
+        "action": "sound",
+        "options": [
+          "/sfx/gun/plasma3.ogg",
+          "/sfx/gun/plasma_shotgun1.ogg",
+          "/sfx/gun/plasma_mp1.ogg"
+        ]
+      }
+    ]
+  },
+  {
+    "op": "replace",
+    "path": "/animationLoops",
+    "value": true
+  }
+]

@@ -3,11 +3,13 @@
 
   "effectConfig" : {
 
-    "effectMaxErchius" : 5000,
+    "effectMaxErchius" : 2000,
 	"energyCost" : 0.06,
 	"healthDamage" : 1.0,
 	"tickTimeBase" : 2.5,
-	"tickTimeReductionOverCap" : 0.01
+	"tickTimeReductionOverCap" : 0.01,
+	"geigerTimeBase" : 1.5,
+	"erchiusCoatMult" : 1.5
   },
   "defaultDuration" : 5,
 

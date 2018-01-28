@@ -1,0 +1,20 @@
+{
+  "projectileName" : "bubblespop",
+  "image" : "bubbles.png",
+  "physics" : "flame",
+  "animationCycle" : 1.05,
+  "animationLoops" : false,
+  "damageKindImage" : "icon.png",
+  "frameNumber" : 16,
+  "power" : 50,
+  "speed" : 25,
+  "timeToLive" : 1,
+  "bounces" : 4,
+  "piercing" : false,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "lightColor" : [60, 20, 250],
+  "damageKind" : "bubble",
+  "statusEffects" : [
+    "wet"
+  ]
+}

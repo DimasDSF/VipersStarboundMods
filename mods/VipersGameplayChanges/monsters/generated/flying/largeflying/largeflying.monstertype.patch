@@ -1,0 +1,118 @@
+[
+{
+	"op" : "replace",
+	"path" : "/baseParameters/behaviorConfig/targetQueryRange",
+	"value" : 40
+},
+{
+	"op" : "replace",
+	"path" : "/baseParameters/behaviorConfig/approachActions/0/parameters",
+	"value" : { "targetOffset": [0, 4], "minRange": 5, "maxRange": 15 }
+},
+{
+	"op" : "add",
+	"path" : "/baseParameters/behaviorConfig/foundTargetActions",
+	"value" : [{ "name" : "action-aggrohop",
+				"parameters" : { "aggroHopSpeed" : 0, "aggroHopWait" : 0, "aggroHopState" : "", "onGround" : false }
+			  }]
+},
+{
+	"op" : "replace",
+	"path" : "/baseParameters/behaviorConfig/windupTime",
+	"value" : 0.2
+},
+{
+	"op" : "add",
+	"path" : "/baseParameters/skillCount",
+	"value" : 2
+},
+
+// Remove baseSkills
+// Supaya dia cuma pake specialSkills
+
+{
+	"op":"remove",
+	"path":"/baseParameters/baseSkills"
+},
+
+// Not included:
+// beetleSwarmAttack (ground only)
+// doubleBarbSprayAttack (nyerang ke belakang)
+// flyingSwoopAttack (obviously)
+// iceBlastAttack (terlalu deket, monsternya gak nyampe)
+// inkSprayAttack (OP)
+// seedSpitAttack (ga berfungsi)
+// spiceCloudAttack (terlalu deket)
+// staticDischargeAttack (ga berfungsi)
+// tentacleShotAttack (unique tentacle)
+// flameBurst (supaya naturally spawned monster ttp punya)
+// sonicWave (supaya naturally spawned monster ttp punya)
+// iceShot (supaya naturally spawned monster ttp punya)
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//{
+//    "op": "add",
+//    "path": "/baseParameters/specialSkills/-",
+//    "value": "darkGasAttack"
+//},
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+{
+	"op" : "replace",
+	"path" : "/baseParameters/statusSettings/stats/maxHealth/baseValue",
+	"value" : 100
+},
+{
+	"op" : "replace",
+	"path" : "/baseParameters/statusSettings/stats/powerMultiplier/baseValue",
+	"value" : 2.5
+},
+{
+	"op":"replace",
+	"path":"/baseParameters/knockoutTime",
+	"value": 0
+},
+{
+	"op" : "replace",
+	"path" : "/baseParameters/statusSettings/stats/knockbackStunTime/baseValue",
+	"value" : 0
+}
+
+]

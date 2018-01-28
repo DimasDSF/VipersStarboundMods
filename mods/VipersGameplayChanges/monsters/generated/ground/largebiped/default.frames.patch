@@ -1,0 +1,29 @@
+[
+{
+	"op" : "add",
+	"path" : "/aliases/fire.1",
+	"value" : "melee.1"
+},
+{
+	"op" : "add",
+	"path" : "/aliases/fire.2",
+	"value" : "melee.2"
+},
+{
+	"op" : "add",
+	"path" : "/aliases/fire.3",
+	"value" : "melee.3"
+},
+{
+	"op" : "add",
+	"path" : "/aliases/fire.4",
+	"value" : "melee.4"
+},
+{
+	"op" : "add",
+	"path" : "/aliases/idle.1",
+	"value" : "idle"
+}
+]
+
+

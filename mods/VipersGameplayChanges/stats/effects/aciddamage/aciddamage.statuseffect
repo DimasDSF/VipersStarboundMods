@@ -1,0 +1,16 @@
+{
+  "name" : "aciddamage",
+  "blockingStat" : "poisonStatusImmunity",
+
+  "effectConfig" : {},
+  "defaultDuration" : 15,
+
+  "scripts" : [
+    "aciddamage.lua"
+  ],
+
+  "animationConfig" : "aciddamage.animation",
+
+  "label" : "Acid",
+  "icon" : "/interface/statuses/poison.png"
+}

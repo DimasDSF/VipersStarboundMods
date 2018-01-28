@@ -1,0 +1,12 @@
+[
+  {
+    "op": "replace",
+    "path": "/physics",
+    "value": "fireball"
+  },
+  {
+    "op": "add",
+    "path": "/bounces",
+    "value": 10
+  }
+]

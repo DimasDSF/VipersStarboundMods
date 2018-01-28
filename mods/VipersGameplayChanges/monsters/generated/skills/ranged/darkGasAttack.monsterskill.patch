@@ -1,0 +1,59 @@
+[
+{
+	"op" : "add",
+	"path" : "/animationParameters/sounds/fireFireBreath",
+	"value" :  [ "/sfx/projectiles/fireball_spit.ogg"  ]
+},
+{
+	"op" : "add",
+	"path" : "/config/hostileActions/0/parameters/fireSound",
+	"value" : "fireFireBreath"
+},
+{
+	"op" : "replace",
+	"path" : "/config/hostileActions/0/parameters/maximumRange",
+	"value" : 12
+},
+
+
+
+
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/cooldown",
+    "value": [ 2, 4 ]
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/minimumRange",
+    "value": 1
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/windupTime",
+    "value": 0.4
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/winddownTime",
+    "value": 0.01
+  },
+  {
+    "op": "replace",
+    "path": "/config/hostileActions/0/parameters/fireDelay",
+    "value": 0
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/projectileParameters/statusEffects",
+    "value": [
+      "weakpoison",
+	  "tarslow"
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/config/hostileActions/0/parameters/fireArc",
+    "value": true
+  }
+]

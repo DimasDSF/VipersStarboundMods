@@ -1,0 +1,11 @@
+[
+  {
+    "op": "add",
+    "path": "/list/-",
+    "value": {
+      "action": "liquid",
+      "liquid": "jellyliquid",
+      "quantity": 6
+    }
+  }
+]

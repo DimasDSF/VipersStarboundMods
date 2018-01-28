@@ -1,0 +1,83 @@
+[
+  {
+    "op": "add",
+    "path": "/statusEffects",
+    "value": [
+      "wet"
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/actionOnReap/-",
+    "value": {
+      "action": "option",
+      "options": [
+        {
+          "action": "projectile",
+          "type": "bubblespop",
+          "fuzzAngle": 2,
+          "inheritDamageFactor": 1,
+          "inheritSpeedFactor": 1
+        },
+        {
+          "action": "projectile",
+          "type": "bubblesfloat",
+          "fuzzAngle": 2,
+          "inheritDamageFactor": 1,
+          "inheritSpeedFactor": 1
+        },
+        {
+          "action": "actions",
+          "list": [
+            {
+              "action": "projectile",
+              "type": "bubblesfloat",
+              "fuzzAngle": 2,
+              "inheritDamageFactor": 1,
+              "inheritSpeedFactor": 1
+            },
+            {
+              "action": "projectile",
+              "type": "bubblespop",
+              "inheritDamageFactor": 0.5,
+              "inheritSpeedFactor": 1.1,
+              "fuzzAngle": 15,
+              "angleAdjust": 15,
+              "autoFlipAdjust": true
+            }
+          ]
+        },
+        {
+          "action": "actions",
+          "list": [
+            {
+              "action": "projectile",
+              "type": "bubblesfloat",
+              "fuzzAngle": 2,
+              "inheritDamageFactor": 1,
+              "inheritSpeedFactor": 1
+            },
+            {
+              "action": "projectile",
+              "type": "bubblespop",
+              "inheritDamageFactor": 0.5,
+              "inheritSpeedFactor": 0.9,
+              "fuzzAngle": 15,
+              "angleAdjust": 15,
+              "autoFlipAdjust": true
+            },
+            {
+              "action": "projectile",
+              "type": "bubblespop",
+              "inheritDamageFactor": 0.5,
+              "inheritSpeedFactor": 1.1,
+              "fuzzAngle": 15,
+              "angleAdjust": 15,
+              "autoFlipAdjust": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

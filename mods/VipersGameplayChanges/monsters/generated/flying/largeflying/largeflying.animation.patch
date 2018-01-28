@@ -1,0 +1,27 @@
+[
+  {
+    "op": "replace",
+    "path": "/animatedParts/stateTypes/body/states/windup/cycle",
+    "value": 0.2
+  },
+  {
+    "op": "replace",
+    "path": "/animatedParts/stateTypes/body/states/charge/cycle",
+    "value": 0.2
+  },
+  {
+    "op": "replace",
+    "path": "/animatedParts/stateTypes/body/states/fire/frames",
+    "value": 1
+  },
+  {
+    "op": "replace",
+    "path": "/animatedParts/stateTypes/body/states/fire/cycle",
+    "value": 1
+  },
+  {
+    "op": "add",
+    "path": "/sounds/aggroHop/-",
+    "value": "/sfx/npc/monsters/monster_surprise.ogg"
+  }
+]

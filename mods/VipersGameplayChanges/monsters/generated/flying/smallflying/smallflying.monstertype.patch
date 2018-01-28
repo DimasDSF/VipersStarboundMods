@@ -1,0 +1,291 @@
+[
+{
+	"op" : "replace",
+	"path" : "/baseParameters/behaviorConfig/targetQueryRange",
+	"value" : 30
+},
+{
+	"op" : "replace",
+	"path" : "/baseParameters/behaviorConfig/approachActions/0/parameters",
+	"value" : { "targetOffset": [0, 4], "minRange": 5 }
+},
+{
+	"op" : "add",
+	"path" : "/baseParameters/behaviorConfig/foundTargetActions",
+	"value" : [{ "name" : "action-aggrohop",
+				"parameters" : { "aggroHopSpeed" : 0, "aggroHopWait" : 0, "aggroHopState" : "", "onGround" : false }
+			  }]
+},
+
+{
+	"op" : "add",
+	"path" : "/baseParameters/behaviorConfig/projectileOffset",
+	"value" : [1.0, 1.5]
+},
+{
+	"op" : "add",
+	"path" : "/baseParameters/behaviorConfig/windupTime",
+	"value" : 0.01
+},
+
+{
+	"op" : "replace",
+	"path" : "/baseParameters/behaviorConfig/swoopVelocity",
+	"value" : 45
+},
+{
+	"op" : "add",
+	"path" : "/baseParameters/skillCount",
+	"value" : 2
+},
+
+// Dia punya melee attack sebagai baseSkills
+// Ranged attack sebagai specialSkills
+
+// Not included:
+// doubleBarbSprayAttack (nyerang ke belakang)
+// inkSprayAttack (OP)
+// seedSpitAttack (ga berfungsi)
+// staticDischargeAttack (ga berfungsi)
+// tentacleShotAttack (unique tentacle)
+
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills",
+    "value": [ "acidicSpitAttack" ]
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "acidSprayAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "beamBurstAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "beetleSwarmAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "bloodVomitAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "blueFlameAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "boneRainAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "bubbleBlastAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "burninghaloAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "cellBlastAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "darkGasAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "darkGravityBallAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "explosivePhlegmAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "eyeballShotAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "eyeballSprayAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "fireballAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "fireSwirlAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "fishBreathAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "flameBurstAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "flyingSwoopAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "gasBelchAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "glitterAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "iceBlastAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "iceShotAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "leafyGustAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "lightBallAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "miniDragonBreathAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "mudBallAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",		// masih butuh sfx baru utk tembakan beruntun
+    "value": "orbOfZotsAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",		// masih butuh sfx baru utk tembakan beruntun
+    "value": "plasmaSweepAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "plasmaTorpedoAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "putridWaveAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "rainbowVomitAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "rockRollAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "rockShotAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "shardSprayAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "shockingBoltAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "shockingWaveAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "smokeRingAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "snotBubbleAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "snotShotAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "sonicWaveAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",
+    "value": "spiceCloudAttack"
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/specialSkills/-",		// this one need better SFX
+    "value": "waterGunAttack"
+  },
+
+
+
+{
+	"op" : "replace",
+	"path" : "/baseParameters/statusSettings/stats/maxHealth/baseValue",
+	"value" : 50
+},
+{
+	"op":"replace",
+	"path":"/baseParameters/knockoutTime",
+	"value": 0.1
+},
+{
+	"op": "replace",
+	"path": "/baseParameters/statusSettings/stats/knockbackStunTime/baseValue",
+	"value": 0.1
+}
+
+]

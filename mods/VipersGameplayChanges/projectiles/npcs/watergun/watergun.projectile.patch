@@ -1,0 +1,11 @@
+[
+  {
+    "op": "add",
+    "path": "/actionOnReap/-",
+    "value": {
+      "action": "liquid",
+      "liquid": "water",
+      "quantity": 1
+    }
+  }
+]

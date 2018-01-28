@@ -1,0 +1,14 @@
+{
+  "name" : "erchiuscoat",
+  "effectConfig" : {},
+  "defaultDuration" : 20,
+
+  "scripts" : [
+    "erchiuscoat.lua"
+  ],
+
+  "animationConfig" : "erchiuscoat.animation",
+
+  "label" : "Erchius Coat",
+  "icon" : "/interface/statuses/erchius.png"
+}
