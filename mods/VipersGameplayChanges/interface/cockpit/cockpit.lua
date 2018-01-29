@@ -30,14 +30,29 @@ function init()
   self.sounds = config.getParameter("sounds")
   self.playTyping = true
 
+  --sb.logInfo(string.format("[cockpit.lua]: Init Called at world.time() = %s", world.time()))
+  
+	if world.getProperty("interferenceEndTime") == nil then
+		world.setProperty("interferenceEndTime", world.time())
+	end
+	if world.getProperty("interferenceLastCheckTime") == nil then
+		world.setProperty("interferenceLastCheckTime", 0)
+	end
+  checkInterference()
+  local interferenceStatus = world.time() < world.getProperty("interferenceEndTime")
+  
   self.state = FSM:new()
-  if not contains(player.shipUpgrades().capabilities, "planetTravel") then
-    self.state:set(disabledState)
-  elseif celestial.skyInHyperspace() and celestial.currentSystem() then
-    self.state:set(transitState)
-  else
-    self.state:set(systemScreenState, celestial.currentSystem())
-  end
+	if not contains(player.shipUpgrades().capabilities, "planetTravel") then
+		self.state:set(disabledState)
+	elseif celestial.skyInHyperspace() and celestial.currentSystem() then
+		self.state:set(transitState)
+	else
+		if interferenceStatus then
+			self.state:set(interferenceState)
+		else
+			self.state:set(systemScreenState, celestial.currentSystem())
+		end
+	end
 
   widget.registerMemberCallback("bookmarksFrame.bookmarkList.bookmarkItemList", "editBookmark", editBookmark)
   widget.registerMemberCallback("bookmarksFrame.bookmarkList.bookmarkItemList", "selectBookmark", selectBookmark)
@@ -45,6 +60,22 @@ function init()
   pane.playSound(self.sounds.open)
 
   player.lounge(pane.sourceEntity())
+end
+
+function checkInterference()
+	local interferenceRecalcFreq = 30
+	local interferenceChance = 2
+	local interferenceDurationMin = 180
+	local interferenceDurationMax = 300
+	if world.getProperty("interferenceEndTime") < world.time() and world.getProperty("interferenceLastCheckTime") + interferenceRecalcFreq < world.time() then
+		world.setProperty("interferenceLastCheckTime", world.time())
+		local interferenceRND = math.random(0,100)
+		if interferenceRND <= interferenceChance then
+			local interfEndTime = world.time() + math.random(interferenceDurationMin, interferenceDurationMax)
+			world.setProperty("interferenceEndTime", interfEndTime)
+			world.setProperty("interferenceLastCheckTime", interfEndTime + interferenceRecalcFreq)
+		end
+	end
 end
 
 function dismissed()
@@ -491,6 +522,34 @@ function transitState()
   return self.state:set(systemScreenState, celestial.currentSystem())
 end
 
+function interferenceState()
+	View:reset()
+	widget.setVisible("interferenceLabelTop", true)
+	widget.setVisible("interferenceLabel", true)
+	widget.setVisible("interferenceTime", true)
+
+	local colorTop = {255, 242, 107, 255}
+	local colorBot = {255, 73, 66, 255}
+	local colorTime = {50, 250, 140, 255}
+	widget.setFontColor("interferenceLabel", colorBot)
+	widget.setFontColor("interferenceLabelTop", colorTop)
+	widget.setFontColor("interferenceTime", colorTime)
+	
+	local interfEndTime = world.getProperty("interferenceEndTime")
+
+	pane.playSound(self.sounds.interference)
+	
+	while not (world.time() > interfEndTime) do
+		widget.setText("interferenceTime", string.format("Estimated Interference Time: %i s.", util.round(interfEndTime - world.time())))
+		coroutine.yield()
+	end
+
+	widget.setVisible("interferenceLabelTop", false)
+	widget.setVisible("interferenceLabel", false)
+	widget.setVisible("interferenceTime", false)
+	return self.state:set(systemScreenState, celestial.currentSystem())
+end
+
 function systemUniverseTransition(fromSystem)
   widget.setVisible("zoomOut", false)
   widget.setVisible("remoteTitle", false)
@@ -560,6 +619,11 @@ function universeScreenState(startSystem)
     View.stars.systems = systems
     View.stars.lines = lines
 
+	checkInterference()
+	if world.time() < world.getProperty("interferenceEndTime") then
+		return self.state:set(interferenceState)
+	end
+	
     local newHover = closestSystemInRange(View:toUniverse(View:mousePosition()), systems, 2.5)
     if newHover and not compare(newHover, selection) then
       local tooltip = config.getParameter("systemTooltip")
@@ -873,7 +937,7 @@ function systemScreenState(system, warpIn)
 
   View:reset()
   local planets = util.untilNotEmpty(function() return celestial.children(system) end)
-
+  
   widget.setVisible("systemName", true)
   widget.setText("systemName", celestial.planetName(system))
 
@@ -911,6 +975,11 @@ function systemScreenState(system, warpIn)
     end
     hover = closestLocationInRange(View:toSystem(View:mousePosition()), system, 10)
 
+	checkInterference()
+	if world.time() < world.getProperty("interferenceEndTime") then
+		return self.state:set(interferenceState)
+	end
+	
     if self.viewCoordinate then
       return self.state:set(systemUniverseTransition, system)
     end
@@ -1156,7 +1225,7 @@ function planetScreenState(planet)
   widget.setVisible("zoomOut", true)
 
   View:reset()
-
+  
   View.backgroundScale = View:bgScale("planet")
 
   View.drawPlanet = true
@@ -1178,6 +1247,11 @@ function planetScreenState(planet)
   while true do
     View:setCamera("system", celestial.planetPosition(planet), planetScale)
 
+	checkInterference()
+	if world.time() < world.getProperty("interferenceEndTime") then
+		return self.state:set(interferenceState)
+	end
+	
     if self.viewCoordinate then
       return self.state:set(planetSystemTransition, planet)
     end
