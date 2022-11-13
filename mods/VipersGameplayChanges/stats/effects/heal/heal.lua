@@ -9,17 +9,16 @@ function init()
 end
 
 function update(dt)
-	local statefflist = status.activeUniqueStatusEffectSummary()
-	local efftablestring = sb.printJson(statefflist)
-	local hashungryeff = string.find(efftablestring, "hungry")
-	local hasstarvingeff = string.find(efftablestring, "starving")
-	local starvinghealmult = 1.0
-	if hashungryeff ~= nil then
-		starvinghealmult = 0.7
-	elseif hasstarvingeff ~= nil then
-		starvinghealmult = 0.3
+	if entity.entityType() == "player" then
+		local hungermult = math.max(0.3, math.min(1.0, status.resource("food")/status.resourceMax("food")))
+		local satietyusage = self.healingRate * 0.01 * dt
+		if status.resource("health") < status.resourceMax("health") then
+			status.consumeResource("food", satietyusage)
+		end
+		status.modifyResource("health", self.healingRate * hungermult * dt)
+	else
+		status.modifyResource("health", self.healingRate * dt)
 	end
-	status.modifyResource("health", self.healingRate * starvinghealmult * dt)
 end
 
 function uninit()

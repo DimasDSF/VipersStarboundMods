@@ -7,11 +7,14 @@
 	"energyCost" : 0.06,
 	"healthDamage" : 1.0,
 	"tickTimeBase" : 2.5,
-	"tickTimeReductionOverCap" : 0.01,
+	"tickTimeReductionOverCap" : 0.025,
 	"geigerTimeBase" : 1.5,
-	"erchiusCoatMult" : 1.5
+	"erchiusCoatMult" : 1.5,
+	"erchiusCoatBase" : 200,
+	"liquidMult": 2.0,
+	"solidMult": 1.0
   },
-  "defaultDuration" : 5,
+  "defaultDuration" : 1,
 
   "scripts" : [
     "erchiussickness.lua"

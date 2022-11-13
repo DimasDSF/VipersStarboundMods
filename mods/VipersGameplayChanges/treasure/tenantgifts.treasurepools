@@ -18,9 +18,8 @@
     [1, {
       "pool" : [
         {"weight" : 0.55, "pool" : "tenantMoney"},
-        {"weight" : 0.20, "pool" : "healingItem"},
-        {"weight" : 0.10, "pool" : "tool"},
-        {"weight" : 0.10, "pool" : "thrownWeapon"},
+        {"weight" : 0.25, "pool" : "healingItem"},
+        {"weight" : 0.15, "pool" : "tool"},
         {"weight" : 0.025, "pool" : "weapon"},
         {"weight" : 0.015, "pool" : "shield"},
         {"weight" : 0.005, "pool" : "instrument"},

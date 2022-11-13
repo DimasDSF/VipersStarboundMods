@@ -67,7 +67,7 @@ function checkInterference()
 	local interferenceChance = 2
 	local interferenceDurationMin = 180
 	local interferenceDurationMax = 300
-	if world.getProperty("interferenceEndTime") < world.time() and world.getProperty("interferenceLastCheckTime") + interferenceRecalcFreq < world.time() then
+	if (world.getProperty("interferenceEndTime") or 0) < world.time() and (world.getProperty("interferenceLastCheckTime") or 0) + interferenceRecalcFreq < world.time() then
 		world.setProperty("interferenceLastCheckTime", world.time())
 		local interferenceRND = math.random(0,100)
 		if interferenceRND <= interferenceChance then
@@ -135,6 +135,11 @@ function update(dt)
   self.tooltipOverride = nil
 
   self.state:update(dt)
+  
+  View.questLocations = {}
+  for _, p in pairs(player.questLocations()) do
+    table.insert(View.questLocations, {p[1], p[2] and "tracked" or "untracked"})
+  end
 
   View:render(dt)
 
@@ -144,10 +149,19 @@ function update(dt)
 
   local questWorldId = player.currentQuestWorld()
   local coordinate = questWorldId and worldIdCoordinate(questWorldId)
-  if questWorldId and coordinate and player.isMapped(coordinate) then
+  local questLocation = player.currentQuestLocation()
+  if (questWorldId and coordinate) or questLocation then
     widget.setButtonEnabled("goToQuest", true)
   else
     widget.setButtonEnabled("goToQuest", false)
+  end
+
+  local bountyStation = player.getProperty("bountyStation") or {}
+  bountyStation = bountyStation[player.serverUuid()]
+  if bountyStation then
+    widget.setButtonEnabled("goToPeacekeeper", true)
+  else
+    widget.setButtonEnabled("goToPeacekeeper", false)
   end
 
   if not widget.active("coordinatesFrame") then
@@ -218,9 +232,32 @@ function goToQuest()
   if questWorldId then
     local coordinate = worldIdCoordinate(questWorldId)
     if coordinate then
-      self.focus = {system = coordinateSystem(coordinate), target = {"coordinate", coordinate}}
+      if player.isMapped(coordinate) then
+        self.focus = {system = coordinateSystem(coordinate), target = {"coordinate", coordinate}}
+      else
+        self.focus = {system = coordinateSystem(coordinate)}
+      end
+      return
     end
   end
+  local questLocation = player.currentQuestLocation()
+  if questLocation then
+    self.focus = {system = locationCoordinate(questLocation.system), target = questLocation.location}
+  end
+end
+
+function goToPeacekeeper()
+  local bountyStation = player.getProperty("bountyStation")
+  bountyStation = bountyStation[player.serverUuid()]
+  local system, target
+  if bountyStation.system then
+    system = bountyStation.system
+
+    if bountyStation.uuid then
+      target = {"object", bountyStation.uuid}
+    end
+  end
+  self.focus = {system = system, target = target}
 end
 
 function zoomOut()
@@ -661,7 +698,19 @@ function universeScreenState(startSystem)
 
     if self.focus.system then
       if compare(View.universeCamera.position, systemPosition(self.focus.system)) then
-        return self.state:set(universeSystemTransition, systems, lines, self.focus.system, false)
+        local viewSystem = player.isMapped(self.focus.system) and self.focus.target ~= nil
+        if viewSystem and self.focus.target[1] == "object" then
+          local mappedObjects = player.mappedObjects(self.focus.system)
+          viewSystem = mappedObjects[self.focus.target[2]] ~= nil
+        end
+        if viewSystem then
+          return self.state:set(universeSystemTransition, systems, lines, self.focus.system, false)
+        else
+          selection = self.focus.system
+          View:select(selection, {"coordinate", selection})
+          View:showSystemInfo(selection)
+          self.focus = {}
+        end
       else
         return self.state:set(universeMoveState, View.universeCamera.position, systems, systemPosition(self.focus.system), false)
       end
@@ -1002,7 +1051,7 @@ function systemScreenState(system, warpIn)
                 type = celestial.objectType(self.focus.target[2]),
                 parameters = celestial.objectParameters(self.focus.target[2])
               })
-            else
+            elseif mappedObjects[self.focus.target[2]] ~= nil then
               View:showObjectInfo(system, {
                 uuid = self.focus.target[2],
                 type = mappedObjects[self.focus.target[2]].typeName,
@@ -1010,8 +1059,8 @@ function systemScreenState(system, warpIn)
               })
             end
           end
-          self.focus = {}
         end
+		self.focus = {}
       else
         return self.state:set(systemUniverseTransition, system)
       end
@@ -1161,7 +1210,7 @@ function systemScreenState(system, warpIn)
     View.system.destination = destination
     View.system.hover = hover
 
-    if selection and selection[1] == "object" then
+    if selection and selection[1] == "object" and (isCurrent or mappedObjects[uuid] ~= nil) then
       local uuid = selection[2]
       local typeName = isCurrent and celestial.objectType(uuid) or mappedObjects[uuid].typeName
       local parameters = isCurrent and celestial.objectParameters(uuid) or mappedObjects[uuid].parameters
